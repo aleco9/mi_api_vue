@@ -158,7 +158,7 @@ export default {
                 const intervalo = setTimeout(() => {
                     this.intSelect(); 
                     clearTimeout(intervalo);
-                }, 3000);
+                }, 4000);
                 
             }).
             catch((error) => {

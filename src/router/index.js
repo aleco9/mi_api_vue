@@ -8,13 +8,31 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/area',
+    name: 'area',
+    component: () => import(/* webpackChunkName: "area" */ '../views/Area.vue')
+  },
+  {
+    path: '/area/:id',
+    name: 'areaUpdate',
+    component: () => import(/* webpackChunkName: "areaUpdate" */ '../views/AreaUpdate.vue')
+  },
+  {
+    path: '/empleado',
+    name: 'emplead',
+    meta: {
+      requireAuth: false,
+      verificarRol: true,
+      rol: 'admin',
+      precondicion:"area"
+    },
+    component: () => import(/* webpackChunkName: "emplead" */ '../views/Empleado.vue')
+  },
+  {
+    path: '/empleado/:id',
+    name: 'empleado',
+    component: () => import(/* webpackChunkName: "empleadoUpdate" */ '../views/EmpleadoUpdate.vue')
+  },
 ]
 
 const router = createRouter({
@@ -22,4 +40,14 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next)=>{
+  if(to.matched.some((record) => record.meta.requireAuth)){
+    if(null === localStorage.getItem('auth') || 'false' == localStorage.getItem('auth')){
+      next({name: "home"});
+    }
+  }
+  next();
+});
+
 export default router
+

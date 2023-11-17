@@ -1,0 +1,61 @@
+{
+  "areas": [
+    {
+      "name": "produccion",
+      "active": false,
+      "id": 1
+    },
+    {
+      "name": "finanzas",
+      "active": true,
+      "id": 2
+    },
+    {
+      "name": "contabilidad",
+      "active": true,
+      "id": 3
+    }
+  ],
+  "empleados": [
+    {
+      "id": 1,
+      "name": "Alejandro Muñoz Castro",
+      "areaId": 1,
+      "cars": "moto",
+      "placa": "abc132",
+      "color": "azul"
+    },
+    {
+      "id": 2,
+      "name": "Luis Herrera",
+      "areaId": 2,
+      "cars": "automovil",
+      "placa": "qwe456",
+      "color": "rojo"
+    },
+    {
+      "id": 3,
+      "name": "Fernando Tapia",
+      "areaId": 3,
+      "cars": "moto",
+      "placa": "zxc789",
+      "color": "verde"
+    },
+    {
+      "name": "pedro martinez",
+      "areaId": 2,
+      "cars": "moto",
+      "placa": "poi562",
+      "color": "celeste",
+      "id": 4
+    },
+    {
+      "name": "ana gutierrez",
+      "areaId": 3,
+      "cars": "moto",
+      "placa": "ert654",
+      "color": "verde",
+      "id": 5
+    }
+  ]
+}

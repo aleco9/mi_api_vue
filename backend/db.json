@@ -56,6 +56,22 @@
       "placa": "ert654",
       "color": "verde",
       "id": 5
+    },
+    {
+      "name": "samuel ",
+      "areaId": 1,
+      "cars": null,
+      "placa": "sfr4332",
+      "color": "negro",
+      "id": 6
+    },
+    {
+      "name": "vicente ",
+      "areaId": 2,
+      "cars": "moto",
+      "placa": "dfg678",
+      "color": "rojo",
+      "id": 7
     }
   ]
 }

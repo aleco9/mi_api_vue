@@ -12,7 +12,12 @@
                             <option :value="area.id" v-for="area in areas">{{area.name}}</option>
                         </select>
                     </p>
-                    <p>Tipo de Vehiculo: <input type="text" v-model="payload.cars" required/></p>
+                    <p>Tipo de Vehiculo:</p>
+                    <select v-model="payload.cars" required>
+                        <option value="" selected>Seleccionar Vehiculo</option>
+                        <option value="moto">Moto</option>
+                        <option value="automovil">Automovil</option>
+                    </select>
                     <p>Numero de Placa: <input type="text" v-model="payload.placa" required/></p>
                     <p>color de Vehiculo: <input type="text" v-model="payload.color" required/></p>
                     <button type="submit" class="waves-effect waves-light btn-small">Agregar</button>
